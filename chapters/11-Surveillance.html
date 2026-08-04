@@ -65,12 +65,14 @@
 <div class="shell">
 
   <nav class="sidebar" aria-label="Table of contents">
+    <button class="sidebar__collapse-bar" data-action="collapse-nav" type="button" aria-label="Collapse contents panel">
+      <span class="arrows">«</span><span>Collapse panel</span>
+    </button>
     <div class="sidebar__head">
       <a class="sidebar__brand" href="../index.html">
         <span class="title">THE CYPHERNOMICON</span>
         <span class="sub">Interactive Edition · v0.666+</span>
       </a>
-      <button class="sidebar__collapse" data-action="collapse-nav" type="button" aria-label="Collapse contents panel" title="Collapse">«</button>
     </div>
     <button class="sidebar__search" data-action="open-search" type="button">
       <span>Search all 20 sections…</span>
@@ -87,7 +89,9 @@
       <a href="https://github.com/SauerNinja/Cyphernomicon">View source on GitHub ↗</a>
     </div>
   </nav>
-  <button class="sidebar-reopen" data-action="expand-nav" type="button" aria-label="Show contents panel" title="Show contents">☰ »</button>
+  <button class="sidebar-reopen" data-action="expand-nav" type="button" aria-label="Show contents panel">
+    <span class="arrows">»</span><span>Contents</span>
+  </button>
 <main id="main">
 <div class="content">
 

@@ -65,12 +65,14 @@
 <div class="shell">
 
   <nav class="sidebar" aria-label="Table of contents">
+    <button class="sidebar__collapse-bar" data-action="collapse-nav" type="button" aria-label="Collapse contents panel">
+      <span class="arrows">«</span><span>Collapse panel</span>
+    </button>
     <div class="sidebar__head">
       <a class="sidebar__brand" href="index.html">
         <span class="title">THE CYPHERNOMICON</span>
         <span class="sub">Interactive Edition · v0.666+</span>
       </a>
-      <button class="sidebar__collapse" data-action="collapse-nav" type="button" aria-label="Collapse contents panel" title="Collapse">«</button>
     </div>
     <button class="sidebar__search" data-action="open-search" type="button">
       <span>Search all 20 sections…</span>
@@ -87,13 +89,18 @@
       <a href="https://github.com/SauerNinja/Cyphernomicon">View source on GitHub ↗</a>
     </div>
   </nav>
-  <button class="sidebar-reopen" data-action="expand-nav" type="button" aria-label="Show contents panel" title="Show contents">☰ »</button>
+  <button class="sidebar-reopen" data-action="expand-nav" type="button" aria-label="Show contents panel">
+    <span class="arrows">»</span><span>Contents</span>
+  </button>
 <main id="main">
 <div class="content">
 
 <div class="hero">
-<div class="hero__layout">
-<div class="hero__text">
+  <div class="hero__figure">
+    <img src="assets/images/cyphernomicon-cover.jpg" alt="The Cyphernomicon, styled as a leather-bound volume" width="530" height="599" loading="eager">
+    <div class="cap"><span>Interactive Edition — 2026</span><span>Fig. 0.1</span></div>
+  </div>
+
   <div class="hero__eyebrow">Cypherpunks FAQ &amp; More · Est. 1994</div>
   <h1>The Cyphernomicon<span class="accent">.</span></h1>
   <p class="hero__dek">Timothy C. May's sprawling, unfinished manifesto-FAQ of the Cypherpunks
@@ -107,123 +114,12 @@
     <a class="btn" href="https://github.com/SauerNinja/Cyphernomicon">Source on GitHub</a>
   </div>
 
-  <div class="headerblock">
+  <div class="headerblock headerblock--centered">
     <div class="field"><span class="k">From</span><span class="v">tcmay@netcom.com (Timothy C. May)</span></div>
     <div class="field"><span class="k">Subject</span><span class="v">THE CYPHERNOMICON: Cypherpunks FAQ and More</span></div>
     <div class="field"><span class="k">Version</span><span class="v dim">0.666, 1994-09-10 — reproduced in full below</span></div>
     <div class="field"><span class="k">Status</span><span class="v dim">Historical document · reformatted, not rewritten</span></div>
   </div>
-</div>
-<div class="hero__media">
-  <img src="assets/images/cyphernomicon-cover.jpg" alt="The Cyphernomicon, styled as a leather-bound volume" width="530" height="599" loading="eager">
-  <div class="cap"><span>Interactive Edition — 2026</span><span>Fig. 0.1</span></div>
-</div>
-</div>
-</div>
-
-<h2 style="font-size:1rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-faint); margin: 2rem 0 0.5rem;">Table of Contents</h2>
-<div class="toc-grid">
-  
-    <a class="toc-card" href="chapters/01-Introduction.html">
-      <span class="num">§01</span>
-      <span class="name">Introduction</span>
-      <span class="meta">Why this document exists, and how to read it.</span>
-    </a>
-    <a class="toc-card" href="chapters/02-MFAQ.html">
-      <span class="num">§02</span>
-      <span class="name">Most Frequently Asked Questions</span>
-      <span class="meta">The questions newcomers ask first, answered plainly.</span>
-    </a>
-    <a class="toc-card" href="chapters/03-Cypherpunks.html">
-      <span class="num">§03</span>
-      <span class="name">Cypherpunks — History, Organization, Agenda</span>
-      <span class="meta">How the list started, who was on it, and what it stood for.</span>
-    </a>
-    <a class="toc-card" href="chapters/04-Goals-and-Ideology.html">
-      <span class="num">§04</span>
-      <span class="name">Goals and Ideology</span>
-      <span class="meta">Privacy, freedom, and the new approaches crypto makes possible.</span>
-    </a>
-    <a class="toc-card" href="chapters/05-Cryptology.html">
-      <span class="num">§05</span>
-      <span class="name">Cryptology</span>
-      <span class="meta">The technical foundations: keys, ciphers, and trust.</span>
-    </a>
-    <a class="toc-card" href="chapters/06-The-Need-For-Strong-Crypto.html">
-      <span class="num">§06</span>
-      <span class="name">The Need for Strong Crypto</span>
-      <span class="meta">Why weak, escrowed, or government-approved crypto defeats the point.</span>
-    </a>
-    <a class="toc-card" href="chapters/07-Summary-PGP.html">
-      <span class="num">§07</span>
-      <span class="name">Summary — PGP</span>
-      <span class="meta">Pretty Good Privacy: the tool that made the list possible.</span>
-    </a>
-    <a class="toc-card" href="chapters/08-Anonymity.html">
-      <span class="num">§08</span>
-      <span class="name">Anonymity, Digital Mixes, and Remailers</span>
-      <span class="meta">Untraceable mail, mix networks, and the mechanics of not being seen.</span>
-    </a>
-    <a class="toc-card" href="chapters/09-Policy.html">
-      <span class="num">§09</span>
-      <span class="name">Policy — Clipper, Key Escrow, and Digital Telephony</span>
-      <span class="meta">The government's counter-moves, and why they failed.</span>
-    </a>
-    <a class="toc-card" href="chapters/10-Legal-Issues.html">
-      <span class="num">§10</span>
-      <span class="name">Legal Issues</span>
-      <span class="meta">Export controls, the First Amendment, and crypto as speech.</span>
-    </a>
-    <a class="toc-card" href="chapters/11-Surveillance.html">
-      <span class="num">§11</span>
-      <span class="name">Surveillance, Privacy, and Intelligence Agencies</span>
-      <span class="meta">What the state can see, and what strong crypto takes away.</span>
-    </a>
-    <a class="toc-card" href="chapters/12-Digital-Cash.html">
-      <span class="num">§12</span>
-      <span class="name">Digital Cash and Net Commerce</span>
-      <span class="meta">Chaum, blinding, double-spending — money before Bitcoin existed.</span>
-    </a>
-    <a class="toc-card" href="chapters/13-Activism-and-Projects.html">
-      <span class="num">§13</span>
-      <span class="name">Activism and Projects</span>
-      <span class="meta">What the list actually built, not just argued about.</span>
-    </a>
-    <a class="toc-card" href="chapters/14-Other-Advanced-Crypto-Applications.html">
-      <span class="num">§14</span>
-      <span class="name">Other Advanced Crypto Applications</span>
-      <span class="meta">Voting, timestamping, and other uses beyond mail and money.</span>
-    </a>
-    <a class="toc-card" href="chapters/15-Reputations-and-Credentials.html">
-      <span class="num">§15</span>
-      <span class="name">Reputations and Credentials</span>
-      <span class="meta">Trust without identity — proving things without saying who you are.</span>
-    </a>
-    <a class="toc-card" href="chapters/16-Crypto-Anarchy.html">
-      <span class="num">§16</span>
-      <span class="name">Crypto Anarchy</span>
-      <span class="meta">The core thesis: what happens when the state can no longer intercept.</span>
-    </a>
-    <a class="toc-card" href="chapters/17-The-Future.html">
-      <span class="num">§17</span>
-      <span class="name">The Future</span>
-      <span class="meta">Predictions — some wrong, some eerily exact.</span>
-    </a>
-    <a class="toc-card" href="chapters/18-Loose-Ends.html">
-      <span class="num">§18</span>
-      <span class="name">Loose Ends and Miscellaneous Topics</span>
-      <span class="meta">Everything that didn't fit cleanly elsewhere.</span>
-    </a>
-    <a class="toc-card" href="chapters/19-Appendices.html">
-      <span class="num">§19</span>
-      <span class="name">Appendices</span>
-      <span class="meta">Reference material, glossary fragments, and source lists.</span>
-    </a>
-    <a class="toc-card" href="chapters/20-Readme.html">
-      <span class="num">§20</span>
-      <span class="name">README</span>
-      <span class="meta">Tim May on the document itself — style, scope, and disclaimers.</span>
-    </a>
 </div>
 
 <div class="foreword">
@@ -251,8 +147,8 @@ None of this is offered as gospel. May was wrong about plenty — some of his pr
   Timothy C. May (1994) and is reproduced here for historical and educational reference, in the
   same spirit every prior mirror has reproduced it — his own README asks only that readers
   "don't put your name on my words." The code, layout, search, and this foreword are original
-  work by Setvin Noether and are MIT licensed; see <a href="https://github.com/SauerNinja/Cyphernomicon/blob/main/LICENSE">LICENSE</a>
-  and <a href="https://github.com/SauerNinja/Cyphernomicon/blob/main/NOTICE.md">NOTICE.md</a> for the full breakdown.
+  work by Setvin Noether and are MIT licensed; see <a href="https://github.com/SauerNinja/Cyphernomicon/blob/master/LICENSE">LICENSE</a>
+  and <a href="https://github.com/SauerNinja/Cyphernomicon/blob/master/NOTICE.md">NOTICE.md</a> for the full breakdown.
 </div>
 
 <div class="notice" id="privacy">
