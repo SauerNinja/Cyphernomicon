@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/</loc><priority>1.0</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/01-Introduction.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/02-MFAQ.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/03-Cypherpunks.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/04-Goals-and-Ideology.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/05-Cryptology.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/06-The-Need-For-Strong-Crypto.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/07-Summary-PGP.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/08-Anonymity.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/09-Policy.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/10-Legal-Issues.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/11-Surveillance.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/12-Digital-Cash.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/13-Activism-and-Projects.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/14-Other-Advanced-Crypto-Applications.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/15-Reputations-and-Credentials.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/16-Crypto-Anarchy.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/17-The-Future.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/18-Loose-Ends.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/19-Appendices.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sauerninja.github.io/Cyphernomicon/chapters/20-Readme.html</loc><priority>0.8</priority></url>
+</urlset>
