@@ -5,7 +5,7 @@
     { "src": "/Cyphernomicon/assets/favicon-32x32.png", "sizes": "32x32", "type": "image/png" },
     { "src": "/Cyphernomicon/assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
   ],
-  "theme_color": "#e9e3d0",
-  "background_color": "#e9e3d0",
+  "theme_color": "#060605",
+  "background_color": "#060605",
   "display": "browser"
 }

@@ -140,9 +140,24 @@ for slug, title, desc in SECTIONS:
     print(f"  {slug}: {len(rendered[slug])} chars, index size so far {len(SEARCH_INDEX)}")
 
 os.makedirs(os.path.join(SITE, "assets", "data"), exist_ok=True)
+
+# About Tim May isn't one of the 20 numbered FAQ sections, so it's not in SECTIONS
+# above — but it still needs to be searchable. Adding its entries here (rather than
+# patching search-index.json by hand afterward) keeps this script the single source
+# of truth for the whole index.
+ABOUT_TIM_MAY_ENTRIES = [
+    {"h": "about-tim-may.html", "p": "About Tim May",
+     "t": "Timothy C. May biography — Intel engineer, alpha-particle soft-error problem, retired 1986, wrote The Crypto Anarchist Manifesto in 1988, co-founded the Cypherpunks mailing list in 1992 with Eric Hughes and John Gilmore, wrote The Cyphernomicon in 1994, died December 13 2018."},
+    {"h": "about-tim-may.html#tm-later", "p": "About Tim May \u203a Decline of the list, and later years",
+     "t": "Cypherpunks list traffic wound down through the early 2000s. May lived privately in Corralitos, California. Reporting at the time of his death, including the New York Times obituary, noted he expressed racist views in other online forums in his later years."},
+    {"h": "about-tim-may.html#tm-legacy", "p": "About Tim May \u203a Death and legacy",
+     "t": "May died of natural causes at home on December 13 2018. Hal Finney, quoted in the Cyphernomicon digital-cash sections, ran the first Bitcoin transaction with Satoshi Nakamoto."},
+]
+SEARCH_INDEX = ABOUT_TIM_MAY_ENTRIES + SEARCH_INDEX
+
 with open(os.path.join(SITE, "assets", "data", "search-index.json"), "w", encoding="utf-8") as f:
     json.dump(SEARCH_INDEX, f, ensure_ascii=False)
-print("Search index entries:", len(SEARCH_INDEX))
+print("Search index entries:", len(SEARCH_INDEX), f"({len(ABOUT_TIM_MAY_ENTRIES)} About Tim May + {len(SEARCH_INDEX)-len(ABOUT_TIM_MAY_ENTRIES)} FAQ sections)")
 
 with open(os.path.join(SITE, "assets", "data", "sections.json"), "w", encoding="utf-8") as f:
     json.dump([{"slug": s, "title": t, "desc": d} for s, t, d in SECTIONS], f)
