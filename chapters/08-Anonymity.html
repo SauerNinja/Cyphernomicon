@@ -5,25 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>§08 Anonymity, Digital Mixes, and Remailers — The Cyphernomicon</title>
 <meta name="description" content="Untraceable mail, mix networks, and the mechanics of not being seen.">
+<meta name="keywords" content="cyphernomicon, anonymity, digital mixes, and remailers, tim may, cypherpunks faq, section 08">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Setvin Noether">
 <link rel="canonical" href="https://sauerninja.github.io/Cyphernomicon/chapters/08-Anonymity.html">
 <meta name="theme-color" content="#e9e3d0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="The Cyphernomicon — Interactive Edition">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="§08 Anonymity, Digital Mixes, and Remailers — The Cyphernomicon">
 <meta property="og:description" content="Untraceable mail, mix networks, and the mechanics of not being seen.">
 <meta property="og:url" content="https://sauerninja.github.io/Cyphernomicon/chapters/08-Anonymity.html">
-<meta property="og:image" content="https://sauerninja.github.io/Cyphernomicon/assets/og-image.png">
+<meta property="og:image" content="https://sauerninja.github.io/Cyphernomicon/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Cyphernomicon, bound as a leather volume">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="§08 Anonymity, Digital Mixes, and Remailers — The Cyphernomicon">
 <meta name="twitter:description" content="Untraceable mail, mix networks, and the mechanics of not being seen.">
-<meta name="twitter:image" content="https://sauerninja.github.io/Cyphernomicon/assets/og-image.png">
+<meta name="twitter:image" content="https://sauerninja.github.io/Cyphernomicon/assets/og-image.jpg">
 
-<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../assets/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="../assets/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="../assets/icon-512.png" sizes="512x512" type="image/png">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="manifest" href="../assets/site.webmanifest">
 <link rel="stylesheet" href="../assets/css/style.css">
@@ -44,6 +52,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 </head>
 <body data-root="../" data-section="08-Anonymity">
+<script>if(localStorage.getItem("cyphernomicon-nav")==="collapsed")document.body.classList.add("nav-collapsed");</script>
 <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="masthead">
@@ -56,16 +65,20 @@
 <div class="shell">
 
   <nav class="sidebar" aria-label="Table of contents">
-    <a class="sidebar__brand" href="../index.html">
-      <span class="title">THE CYPHERNOMICON</span>
-      <span class="sub">Interactive Edition · v0.666+</span>
-    </a>
+    <div class="sidebar__head">
+      <a class="sidebar__brand" href="../index.html">
+        <span class="title">THE CYPHERNOMICON</span>
+        <span class="sub">Interactive Edition · v0.666+</span>
+      </a>
+      <button class="sidebar__collapse" data-action="collapse-nav" type="button" aria-label="Collapse contents panel" title="Collapse">«</button>
+    </div>
     <button class="sidebar__search" data-action="open-search" type="button">
       <span>Search all 20 sections…</span>
       <kbd>⌘K</kbd>
     </button>
     <ul class="sidebar__nav">
       <li><a href="../index.html" class=""><span class="n">00</span><span>Foreword &amp; Cover Sheet</span></a></li>
+      <li><a href="../about-tim-may.html" data-section="about-tim-may" class=""><span class="n">★</span><span>About Tim May</span></a></li>
       <li><a href="../chapters/01-Introduction.html" data-section="01-Introduction" class=""><span class="n">01</span><span>Introduction</span></a></li><li><a href="../chapters/02-MFAQ.html" data-section="02-MFAQ" class=""><span class="n">02</span><span>Most Frequently Asked Questions</span></a></li><li><a href="../chapters/03-Cypherpunks.html" data-section="03-Cypherpunks" class=""><span class="n">03</span><span>Cypherpunks — History, Organization, Agenda</span></a></li><li><a href="../chapters/04-Goals-and-Ideology.html" data-section="04-Goals-and-Ideology" class=""><span class="n">04</span><span>Goals and Ideology</span></a></li><li><a href="../chapters/05-Cryptology.html" data-section="05-Cryptology" class=""><span class="n">05</span><span>Cryptology</span></a></li><li><a href="../chapters/06-The-Need-For-Strong-Crypto.html" data-section="06-The-Need-For-Strong-Crypto" class=""><span class="n">06</span><span>The Need for Strong Crypto</span></a></li><li><a href="../chapters/07-Summary-PGP.html" data-section="07-Summary-PGP" class=""><span class="n">07</span><span>Summary — PGP</span></a></li><li><a href="../chapters/08-Anonymity.html" data-section="08-Anonymity" class="active"><span class="n">08</span><span>Anonymity, Digital Mixes, and Remailers</span></a></li><li><a href="../chapters/09-Policy.html" data-section="09-Policy" class=""><span class="n">09</span><span>Policy — Clipper, Key Escrow, and Digital Telephony</span></a></li><li><a href="../chapters/10-Legal-Issues.html" data-section="10-Legal-Issues" class=""><span class="n">10</span><span>Legal Issues</span></a></li><li><a href="../chapters/11-Surveillance.html" data-section="11-Surveillance" class=""><span class="n">11</span><span>Surveillance, Privacy, and Intelligence Agencies</span></a></li><li><a href="../chapters/12-Digital-Cash.html" data-section="12-Digital-Cash" class=""><span class="n">12</span><span>Digital Cash and Net Commerce</span></a></li><li><a href="../chapters/13-Activism-and-Projects.html" data-section="13-Activism-and-Projects" class=""><span class="n">13</span><span>Activism and Projects</span></a></li><li><a href="../chapters/14-Other-Advanced-Crypto-Applications.html" data-section="14-Other-Advanced-Crypto-Applications" class=""><span class="n">14</span><span>Other Advanced Crypto Applications</span></a></li><li><a href="../chapters/15-Reputations-and-Credentials.html" data-section="15-Reputations-and-Credentials" class=""><span class="n">15</span><span>Reputations and Credentials</span></a></li><li><a href="../chapters/16-Crypto-Anarchy.html" data-section="16-Crypto-Anarchy" class=""><span class="n">16</span><span>Crypto Anarchy</span></a></li><li><a href="../chapters/17-The-Future.html" data-section="17-The-Future" class=""><span class="n">17</span><span>The Future</span></a></li><li><a href="../chapters/18-Loose-Ends.html" data-section="18-Loose-Ends" class=""><span class="n">18</span><span>Loose Ends and Miscellaneous Topics</span></a></li><li><a href="../chapters/19-Appendices.html" data-section="19-Appendices" class=""><span class="n">19</span><span>Appendices</span></a></li><li><a href="../chapters/20-Readme.html" data-section="20-Readme" class=""><span class="n">20</span><span>README</span></a></li>
     </ul>
     <div class="sidebar__foot">
@@ -74,6 +87,7 @@
       <a href="https://github.com/SauerNinja/Cyphernomicon">View source on GitHub ↗</a>
     </div>
   </nav>
+  <button class="sidebar-reopen" data-action="expand-nav" type="button" aria-label="Show contents panel" title="Show contents">☰ »</button>
 <main id="main">
 <div class="content">
 

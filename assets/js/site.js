@@ -22,6 +22,21 @@
   });
   if (scrim) scrim.addEventListener("click", closeSidebar);
 
+  /* ---------- Desktop collapse/expand ---------- */
+  var NAV_KEY = "cyphernomicon-nav";
+  document.querySelectorAll("[data-action='collapse-nav']").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.body.classList.add("nav-collapsed");
+      try { localStorage.setItem(NAV_KEY, "collapsed"); } catch (e) {}
+    });
+  });
+  document.querySelectorAll("[data-action='expand-nav']").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.body.classList.remove("nav-collapsed");
+      try { localStorage.setItem(NAV_KEY, "expanded"); } catch (e) {}
+    });
+  });
+
   /* ---------- Highlight current chapter in sidebar ---------- */
   var here = document.body.getAttribute("data-section");
   if (here) {
